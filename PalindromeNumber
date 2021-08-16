@@ -1,0 +1,15 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+
+    var xTry = x.toString().split().join();
+    var xTryReverse = x.toString().split('').reverse().join('');
+
+        if(Math.sign(xTry) == 1 || Math.sign(xTry) == 0 ){
+            if(xTry === xTryReverse){
+                return true;
+            } else return false;
+        } else return false;
+};
