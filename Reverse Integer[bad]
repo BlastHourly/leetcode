@@ -1,0 +1,34 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    
+    var answerTest = 0;
+    var answer = 0;
+    // if(-2147483647 <= x <= 2147483647){
+    if(x !== 0){
+        
+        if(Math.sign(x) == -1){
+            answerTest = x * (-1);
+            answer = answerTest.toString().split('').reverse().join('');
+            
+                if(-2147483647 <= +answer <= 2147483647){
+                    return +answer * (-1);
+                }else return 0;
+        }else{
+            answer = x.toString().split('').reverse().join('');
+                if(-2147483647 <= +answer <= 2147483647){
+                    return answer;
+                        }else return 0;
+            }
+    }else return 0;
+// }else return 0;
+       
+};
+
+    let reversed = x.toString().split('').reverse().join('');
+
+        if (reversed > 2147483647 || reversed < -2147483648) {
+            return 0;
+        }
