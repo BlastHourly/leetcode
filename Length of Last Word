@@ -1,0 +1,13 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    
+    let request = s.replace(/ +/g, ' ').trim().split(' ');
+    
+    let word = request[request.length-1].split('');
+    
+    return word.length;
+
+};Length of Last Word
