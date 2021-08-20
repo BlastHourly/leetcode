@@ -1,0 +1,17 @@
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var addDigits = function(num) {
+    
+    let checker = num.toString().split('');
+    let answerBlock = [];
+    
+        while(checker.length === 1){
+              for(let i = 0; i < checker.length; i++){
+                  answerBlock = answerBlock + checker[i];
+              }
+        }
+        console.log(answerBlock);
+
+};
