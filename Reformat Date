@@ -1,0 +1,23 @@
+/**
+ * @param {string} date
+ * @return {string}
+ */
+var reformatDate = function(date) {
+    
+        function zeroCheck(n) {
+            if (n < 10)
+                return "0" + n;
+        return n;
+        }
+    
+    let monthSet = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let dateBlock = date.split(' ');
+    
+    let year = dateBlock[2];
+    let month = monthSet.indexOf(dateBlock[1])+1;
+    let day = parseInt(dateBlock[0].replace(/\D+/g,""));
+    
+    let answerString = year + "-" + zeroCheck(month) + "-" + zeroCheck(day);
+    
+    return answerString;
+};
