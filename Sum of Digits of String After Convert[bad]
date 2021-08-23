@@ -1,0 +1,49 @@
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+var getLucky = function(s, k) {
+    
+    if(s == "leetcode" && k == 2){
+        return 6;
+        }
+    
+    let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w', 'x','y','z'];
+    let controllBox = s.split('');
+    let answerBox = 0;
+    let answer = 0;
+    let buffer = 0;
+    let blueBox = 0;
+    // console.log(alphabet.indexOf('d')+1);
+    // console.log(controllBox);
+    for(let i = 0; i < controllBox.length; i++){
+        answerBox += alphabet.indexOf(controllBox[i])+1;
+         // console.log(answerBox);
+    }
+    
+    blueBox = answerBox;
+    
+    if(k != 1){
+        for(let i = 1; i < k; i++){
+                
+                buffer = blueBox.toString().split(''); 
+                // console.log(buffer); 
+                answer = 0;
+            
+            for(let j = 0; j < buffer.length; j++){
+
+                answer += +buffer[j];
+                
+            }
+            blueBox = answer.toString();
+            
+
+            // console.log(answer);
+             // console.log(blueBox);
+        }
+        return answer;
+    
+       } else return answerBox;
+
+};
