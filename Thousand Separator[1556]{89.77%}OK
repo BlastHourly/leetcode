@@ -1,0 +1,21 @@
+/**
+ * @param {number} n
+ * @return {string}
+ */
+var thousandSeparator = function(n) {
+    if(n.toString().length <= 3){
+        return n.toString();
+    }else{
+        let numberic = Math.floor(n.toString().length / 3);
+        let answer = n.toString().split('');
+        for(let i = 1; i <= numberic; i++){
+            answer.splice(n.toString().length - 3*i, 0, ".");
+        }
+        if(answer[0] == "."){
+            answer.splice(0, 1);
+            return answer.join('');
+        }else return answer.join('');
+
+    }
+    
+};
