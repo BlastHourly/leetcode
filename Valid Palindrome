@@ -1,1 +1,14 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    
+    let clearBlock = s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    let reverseBlock = clearBlock.split('').reverse().join('');
+    
+    if(clearBlock == reverseBlock){
+        return true;
+    }else return false;
 
+};
