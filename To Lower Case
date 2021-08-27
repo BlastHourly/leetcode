@@ -1,0 +1,19 @@
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var toLowerCase = function(s) {
+    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    
+    let answerBlock = s.split('');
+    
+    for(let i = 0; i < s.length; i++){
+        for(let j = 0; j < upperCase.length; j++){
+            if(s.split('')[i] == upperCase[j]){
+            answerBlock[i] = lowerCase[j];
+            }
+        }
+    }
+    return answerBlock.join('');
+};
