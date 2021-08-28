@@ -1,0 +1,17 @@
+/**
+ * @param {string} address
+ * @return {string}
+ */
+var defangIPaddr = function(address) {
+    
+    let addressBlock = address.split('');
+
+
+    for(let i = 0; i < address.length; i++){
+        if(addressBlock[i] == "."){
+            addressBlock[i] = "[.]";
+        }
+    }
+
+    return addressBlock.join('');
+};
